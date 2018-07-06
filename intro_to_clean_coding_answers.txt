@@ -1,0 +1,43 @@
+1. 
+Clean code is code that goes beyond working, but is readable, easy-to-follow, well-organized and simple.  It is important because often with work I’ll be collaborating with other people who should be able to look at my code at make sense of it quickly without having to many questions. It is also important because as a project scales, the cleaner the code the easier it will be to maintain and scale it to a larger project.  It’s also the case that if enough time passes that I may forget my own code and it will be much harder to recall and understand the code if it is messy and not clean. 
+
+2.
+I can’t help but think of cell phones because how much people are consumed on them daily and the sensitive information that is stored in the phone or via apps. People have multiple credit cards stored on their phone, access to their bank accounts and litany of other sensitive information.  So if the code was not created to an acceptable standard, and people could easily hack into a person’s phone and steal all of their personal and private information and data then that would be a disaster given the reliance and dependence people have on their phones today.  People’s information could be stolen and sold, which could ruin a person’s life if they are a victim of identity theft.  
+
+3. 
+
+I do not consider this code to be clean because I cannot tell from the function name what task this function is performing. I would also not consider it clean due to the lack of nesting which makes it harder to read. 
+
+FUNCTION convertTemperature(x, y)               // Creating a new function
+ IF y = "F" THEN               // Check if y is equal "F"
+   SET z to (x−32) * (5/9)       // Formula to convert degrees fahrenheit to celsius
+   PRINT z                       // Print result
+ ELSE IF y = "C" THEN          // If y not equal to "F", check if equal to "C"
+   SET z to x * 1.8000 + 32.00   // Formula to convert degrees celsius to fahrenheit
+   PRINT z                       // Print result
+ END IF
+END FUNCTION
+
+4. I would consider this clean code as there is proper and good naming for the function and variables. The nesting is appropriate and makes the code easy to read and to follow.  The function also has one clear task. 
+
+5.
+
+
+FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
+   totalCost = subTotal * discountRate + (subTotal * tax)
+
+   PRINT "Your total due is: " + totalCost
+
+   IF paymentType = 'CASH' THEN
+
+       CALL getPayment RETURNING amount
+
+       PRINT "Change due: " + amount - totalCost
+
+   ELSE IF paymentType = 'CREDIT CARD' THEN
+
+       CALL getPayment RETURNING amount
+
+       PRINT "Your credit card has been charged: " + totalCost
+   END IF
+END FUNCTION
