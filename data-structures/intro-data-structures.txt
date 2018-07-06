@@ -1,0 +1,64 @@
+1a.  
+
+INIT amusementParkLine to an empty array
+SET amusementParkLine[FIRST INDEX] to Vivian
+SET amusementParkLine[SECOND INDEX] to Ava
+SET amusementParkLine[THIRD INDEX] to Josh
+SET amusementParkLine[FOURTH INDEX] to Patrick
+SET amusementParkLine[FIFTH INDEX] to Mike
+
+let amusementParkLine = ["Vivian", "Ava", "Josh", "Patrick", "Mike"]
+
+1b. 
+amusementParkLine = ["Vivian", "Ava", "Josh", "Patrick", "Mike","Mary"]
+
+INIT amusementParkLine to an empty array
+SET amusementParkLine[FIRST INDEX] to Vivian
+SET amusementParkLine[SECOND INDEX] to Ava
+SET amusementParkLine[THIRD INDEX] to Josh
+SET amusementParkLine[FOURTH INDEX] to Patrick
+SET amusementParkLine[FIFTH INDEX] to Mike
+SET amusementParkLine[SIXTH INDEX] to Mary
+
+
+1c. 
+
+function findLinePosition (array, name) {
+ for (let i = 0; i < array.length; i++) {
+	if (name === array[i]) {
+		return i;
+	}
+ }
+ return "There is no one named " + name + " in line."
+}
+
+findLinePosition(amusementParkLine,"Josh");
+
+1d. 
+
+findLinePosition(amusementParkLine,"Emily)
+
+It should return undefined unless I define the function to return something if the name is not in the array. 
+
+1e. 
+
+amusementParkLine = ["Vivian", "Ava", "Josh", "Patrick", "Mike","Mary"]
+
+amusementParkLine.splice(1,0,"Melissa");
+
+1f.  
+
+amusementParkLine = ["Vivian", "Melissa", "Ava", "Josh", "Patrick", "Mike","Mary"];
+
+amusementParkLine.splice(4,1);
+
+2.  Another real world example that would require a data structure is a car dealership to be able to track all the inventory of its cars. 
+
+
+3. Developers would be able to search and find cars based on year, price range, model, trim and color.  Cars would be added to the data structure as more inventory comes in and deleted as the cars are sold.  
+
+
+
+
+
+
