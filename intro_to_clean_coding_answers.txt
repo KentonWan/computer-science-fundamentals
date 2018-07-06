@@ -20,7 +20,7 @@ END FUNCTION
 
 4. I would consider this clean code as there is proper and good naming for the function and variables. The nesting is appropriate and makes the code easy to read and to follow.  The function also has one clear task. 
 
-5.
+5a.
 
 
 FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
@@ -41,3 +41,114 @@ FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
        PRINT "Your credit card has been charged: " + totalCost
    END IF
 END FUNCTION
+
+5b.
+
+FUNCTION checkoutBook(book, guest)
+
+ IF guest.accountActive AND NOT(guest.hasOverdueBooks) AND guest.outstandingFees = 0 THEN
+
+ 	APPEND book to guest.books
+
+        SET book.status to "Checked Out"
+
+        PRINT "Your books have been issued."
+
+ ELSE
+     
+PRINT "Unable to check out book."
+
+ END IF
+
+END FUNCTION
+
+5c.
+
+CLASS BankAccountBalance
+
+ FUNCTION displayBalance
+    PRINT balance
+ END FUNCTION
+
+END
+
+CLASS BankAccountTransactions
+
+ FUNCTION deposit(amount)
+    SET balance to balance + amount
+ END FUNCTION
+
+ FUNCTION withdraw(amount)
+     IF balance > amount THEN
+       SET balance to balance - amount
+     END
+ END FUNCTION
+
+END
+
+CLASS BankAccountOffers
+
+ FUNCTION creditCardOffer
+     IF NOT(customer.hasCreditCard) THEN
+         CALL offerCreditCard
+     END
+ END FUNCTION
+
+ FUNCTION checkingAccountOffer
+     IF NOT(customer.hasCheckingAccount) THEN
+         CALL offerCheckingAccount
+     END
+ END FUNCTION
+
+ ....
+ ....
+ ....
+
+END
+
+
+6. 
+function isPerfectSquare (array) {
+	let sum = array.reduce((total,val) => {return total+val});
+	let squareRoot = Math.sqrt(sum);
+
+	if (Number.isInteger(squareRoot) {
+		return squareRoot;
+	}
+	else {
+		return sum;
+	}
+
+}
+
+7. 
+function findDuplicate(array) {
+  let counts = [];
+  for (let i = 0; i < array.length; i++) {
+    if (counts[array[i]] === undefined) {
+      counts[array[i]] = 1;
+    }
+    else {
+      return true;
+    }
+  }
+  return false;
+  
+}
+
+Extra Credit:
+function isAnagram(stringOne, stringTwo) {
+  let stringOneArray = stringOne.split("");
+  let stringTwoArray = stringTwo.split("");
+  
+  if (stringOneArray.lenghth === stringTwoArray.length){
+    for (let i = 0; i < stringOneArray.length; i++) {
+      if (stringOneArray[i] === stringTwoArray[stringTwoArray.length-1-i]) {
+      }
+      else {
+        return false
+      }
+    }
+  }
+  return true
+}
