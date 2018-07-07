@@ -1,0 +1,66 @@
+1. What is the main difference between a stack and a queue?
+
+The main difference between a stack and a queue is the order that they rank and order they arrange elements and performs task.  Stack uses last-in-first out while a queue uses first-in-first-out.
+
+2. What are the similarities between stacks and queues?
+
+The similarity is that they both structure and organize elements in a linear fashion, the difference is the priority they operate on that data.
+
+
+3. Imagine you are an engineer tasked with implementing the UNDO and REDO options in a word processor such as Microsoft Word. Which data structure would you use for each option and why?
+
+I would want to use the stack data structure as I would be altering the top most element or the most recent or last action done.  
+
+4. 
+
+let word = "Bloc!";
+
+function reverseString(string) {
+  let oldArray = string.split("");
+  let reversedArray = [];
+  for (let i=oldArray.length-1; i >= 0; i--) {
+    reversedArray.push(oldArray[i])
+  }
+  
+  let reversedString = reversedArray.reduce((total,val) =>{ return total + val})
+  return reversedString
+  
+}
+
+5.
+
+CLASS Stack
+
+ FUNCTION pop(queue)
+
+   INIT a new stack
+   FOR each element in queue
+	CALL stack.push WITH element
+   END FOR
+   SET element at the queue position index to temp
+   DECREMENT the stack position by index by 1
+   RETURN temp
+
+ END FUNCTION
+
+END CLASS
+
+6.
+
+CLASS QUEUE
+
+ FUNCTION enqueue(element)
+
+   APPEND element to the end of the list
+
+ END FUNCTION
+
+ FUNCTION dequeue
+
+   SET temp to the first element
+   REMOVE first element of the list from list
+   RETURN temp
+
+ END FUNCTION
+
+END CLASS
