@@ -1,0 +1,70 @@
+1. What are some pros and cons of using linked lists instead of arrays?
+
+The main pro of a linked list is regarding the memory.  Whereas an array can require a lot of memory in consecutive locations that may require rearrangement of the physical memory, in a linked list each node is independent in memory.  This means the operating system can use any available memory location to store it. 
+
+This also plays into a con of a linked list in that due to the linear nature when searching a linked list (versus an index in an array) and the variable locations of nodes, accessing an element can be inefficient and require more time.  
+
+2. Come up with a real world example of a linked list.
+
+Although it may be a stretch, one real world example is the brain trying to remember something in certain cases.  There is a natural process where one will link one item to the next in a subconscious act.  This become apparent when one forgets something and they try to remember by retracing their steps i.e. following the associations of one linked memory to another.  
+
+3. 
+I changed `SET current node to head` to `SET current node to last` as I want to add the node onto the end of the linked list whereas setting current node to "head" would add the new node to the beginning.
+
+LinkedList.prototype.push = function(element) {
+ SET node = {
+   value: element,
+   next: null
+ }
+
+ IF the head node does not exist
+   THEN SET head to node
+ ELSE
+   SET current node to last
+   SET current.next to node
+ }
+}
+
+4.
+Given an unsorted singly linked list, remove all duplicates from the linked list.
+Example
+Input: a -> c -> d -> d -> a
+Output: a -> c -> d
+
+function deleteDuplicates(headNode){
+	SET ptr1 to headNode;
+	SET ptr2 to headNode;
+	SET duplicate to null
+	
+	WHILE ptr2 does not equal null
+		IF ptr1 is equal to ptr2.next 
+			duplicate equals  ptr2.next
+			ptr2.next equals ptr2.next.next
+			DELETE duplicate
+		ELSE
+			ptr2 equals ptr2.next
+
+	ptr1 = ptr1.next
+
+}
+
+5.
+Given an unsorted singly linked list, reverse it.
+Example
+Input: a -> b -> c -> d
+Output: d -> c -> b -> a
+
+function reverseList(node){
+	SET prev = null;
+	SET current = node;
+	SET next = null;
+	WHILE (current does not equal null){
+	 next = current.next
+	 current.next = prev;
+	 prev = current;
+	 current = next;
+	}
+	node = prev;
+}
+
+
