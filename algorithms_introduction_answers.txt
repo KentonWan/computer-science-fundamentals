@@ -1,0 +1,99 @@
+1. 
+
+Making Coffee
+
+function makeCoffee(cups)
+	SET tablespoonsCoffee to cups multiplied by 2
+	OPEN coffee bag by pulling ends apart
+	OPEN lid of coffee machine
+	PLACE coffee filter into coffee dripper concave side facing up
+	GRAB handle of tablespoon measuring spoon
+	SET spoonfuls to 0
+	WHILE spoonfuls is less than or equal to tablespoonsCoffee
+		REACH measuring spoon into coffee bag and fill spoon to be level
+		POUR measuring spoon with coffee into coffee filter
+		ADD one to spoonfuls
+	ENDWHILE
+	GRAB handle of coffee carafe	
+	PULL out carafe from machine
+	PLACE carafe under water faucet
+	TWIST water faucet handle to turn water on
+	FILL carafe until water level reaches cups marker line
+	POUR all water into reservoir of coffee machine
+	PlACE carafe back into machine
+	PRESS DOWN on coffee machine lid to close
+	Press button labeled brew
+	
+END FUNCTION
+
+Washing dishes
+
+function washingDishes()
+	PLACE rubber stopper into drain of right sink
+	TURN sink water faucet to hot setting
+	MOVE faucet over right sink
+	TURN ON sink faucet
+	WHILE right sink is filled less than halfway
+		KEEP water running
+	END WHILE
+	PUT all dishes into right sink
+	GRAB sponge with LEFT HAND
+	WET sponge in right sink
+	GRAB dish detergent bottle with right hand
+	INVERT bottle over sponge
+	SQUEEZE 1 oz of detergent on sponge
+	WHILE dishes are greater or equal to zero in right sink
+		GRAB one dish with right hand
+		WHILE food is on dish
+			SCRUB with sponge
+		END WHILE
+		PLACE in left sink
+	END WHILE
+	MOVE faucet over left sink
+	TURN on sink faucet
+	WHILE dishes are greater or equal to zero in left sink
+		GRAB one dish with right hand
+		WHILE soap is still on dish
+			RINSE with water
+		END WHILE
+		PLACE in drying rack
+	END WHILE
+	TURN OFF sink faucet
+	PULL OUT rubber stopper in right sink and let water drain until sink is empty
+END FUNCTION
+
+function push-up()
+	KNEEL on the floor with thighs and upper body perpendicular to floor
+	STRAIGHTEN both elbows
+	LIFT arms to shoulder height
+	OPEN hands with finger pointing straight and palms facing the floor
+	BEND wrists until fingers point to ceiling
+	LEAN FORWARD hinging at hips until palms are fully on the ground
+	REPOSITION hands to be directly under shoulders
+	STRAIGHTEN right knee
+	PLACE right ball of foot on the ground
+	STRAIGHTEN left knee
+	PLACE left ball of foot on the ground
+	PULL in belly button towards spine to engage abdominal muscles
+	SQUEEZE gluteal muscles
+	WHILE core engaged AND gluteal muscles squeezed
+		BEND elbows 
+		LOWER chest towards ground until 6 inches from ground
+		HOLD for 2 seconds
+		PRESS through hands into the ground
+		STRAIGHTEN elbows until completely straight
+	END WHILE
+
+END FUNCTION
+
+2. Although I don't know the specifics, but I think that Amazon must have solved the supply chain algorithm with their warehouses which would include location, number and what to stock in each warehouse depending on region, fleet of delivery trucks (including number, routes and which trucks deliver which packages) and overall system from order to being processed to delivered.  What stands out is that Amazon is able to deliver so many products within a day or two of order at minimal cost. 
+
+Another company that made a successful algorithm is ikea. They are able to produce well-designed and for the most part well-crafted products at a reasonable price compared to competitors, which makes them so popular.
+
+The last company I want to cite is Ding Tai Fung, a popular Taiwanese restaurant with restaurants across the globe.  They have mastered the algorithm to make these special dumplings that contain soup with a thin yet durable skin, which is important so that the dumpling does not break when handling and thus spills all the soup.  Not only is it a matter of mastering there recipe, but being able to translate that quality in mass quantities at all their restaurants. 
+
+3.  Different factors that make an algorithm efficient versus inefficient are 1) minimal amount of steps to complete the task to increase speed, 2)memory usage, 3) single responsibility for each step, and 4) the resources required to complete the task.  
+		
+
+
+	
