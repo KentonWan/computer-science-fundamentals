@@ -1,0 +1,69 @@
+1. What is a binary tree and what makes it unique to other trees?
+
+A binary tree is a hierarchal data structure that consists of nodes that point to other adjacent members.  A binary tree has a root node with up to two child nodes, a left and right one.
+
+2. What is a heuristic?
+
+A heuristic are guesses an algorithm makes to solve a complex problem quicker than classic methods. 
+
+3. What is another problem besides the shortest-path problem that requires the use of heuristics?
+
+Another program is doing a search like say on Google where the algorithm may yield the results based on past searches from the the user.  Another example could be virus scanning. While it is possible to due a full scan, often a quick scan can be done and it can guess if there is a virus or malware if it finds bits of code that are indicative of viruses or malware
+
+4. What is the difference between a depth-first search and a breadth-first search?
+
+DFS will search a tree by starting at the root node and then going as far as possible along each branch before backtracking where BFS will start at the root node and then go through all the child nodes before moving onto the next level of nodes. 
+
+5. Explain in your own words what an undirected, a-cyclic, unweighted graph is.
+
+A undirected, a-cyclic, unweighted graph is a graph which does not have a clear start and end node, where the nodes do not loop around to each other and the cost of traveling between the nodes is not assigned. 
+
+6. What kind of graph is a binary search tree?
+
+It is a directed, a-cyclic, unweighted graph.
+
+
+
+1. Given a Binary Search Tree and a value, write a function that checks to see whether the value exists within the tree.
+
+
+
+function findValue(root, value) {
+	IF value is greater than root
+		findValue(node.right,value)
+			IF node equal to value
+				RETURN true
+			END IF
+	ELSE IF value is less than root
+		findValue(node.left,value)
+			IF node equal to value
+				RETURN true
+			END IF
+	ELSE
+		RETURN false
+
+
+}
+
+2. Given a Binary Search Tree and two nodes, n1 and n2, write a function that finds the distance between the two nodes.
+
+function findDistance(root,n1,n2)
+  SET distanceN1 = 0
+  SET distanceN2 = 0
+  IF n1 > root AND n2 > root
+    findDistance(root.right,n1,n2)
+  IF n1 < root AND n2 < root
+    findDistance(root.left,n1,n2)
+  IF n1 > root AND n2 < root
+    WHILE (root.right does NOT equal n1)
+      ADD one to distanceN1
+    WHILE (root.left does not equal n2)
+      ADD one to distanceN2
+  IF n1 < root AND n2 > root
+    WHILE (root.right does NOT equal n2)
+      ADD one to distanceN2
+    WHILE (root.left does not equal n1)
+      ADD one to distanceN1
+  RETURN distanceN1 + distanceN2
+
+
