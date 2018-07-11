@@ -1,0 +1,53 @@
+1.What is a real-life scenario that uses linear search?
+
+I'm looking for a certain screw and I would go to the hardware store and once I reach the screw aisle I would start at one spot and sequentially move down the aisle until I found the screw.
+
+2.What is a real-life scenario that uses binary search?
+
+In a library and I'm searching for a book in the midst of many bookshelves organized alphabetically. 
+
+3.Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
+
+7
+
+4.Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
+
+3
+
+5.Given an unsorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+Initially given the fact that the collection is unsorted I would have to use a linear search if I was unable to sort it as binary search requires a sorted collection.  
+
+6.Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+I would use a binary search as I'm able to as the collection is sorted.  While there is potential for the linear search to require fewer iterations if the desired value is on the lower end, my guess is on average it would take fewer iterations to find desired value with binary search as able to cut out a large portion of an already large collection.  
+
+Programming Assignment:
+1. You and a friend have set a wager to see who can find the word "Albatross" in the dictionary the fastest. Write a program to allow you to win the bet.
+
+FUNCTION searchDictonary (dictionary, "albatross")
+ SET low to FIRST WORD of dictionary
+ SET high to LAST WORD of dictionary
+
+ WHILE low <= high
+   SET mid to word directly in middle of low and high
+   IF dictionary[mid] > "albatross" THEN
+   
+     SET high to WORD prior to mid
+   ELSE IF dictionary[mid] < "albatross"
+     SET low to WORD following mid
+   ELSE
+     RETURN mid
+   END IF
+ END WHILE    
+
+
+2. You work at a pet store, and a child has asked you to net the only white-spotted goldfish from the fish tank. Write a program that will help you net the right fish.
+
+function netFish()
+  FOR each fish in the tank
+    IF fishColor = white THEN
+      RETURN
+    END IF
+  END FOR
+END FUNCTION
