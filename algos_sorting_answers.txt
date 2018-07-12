@@ -1,0 +1,54 @@
+1.Write pseudocode for bubble sort.
+
+function bubbleSort(collection) 
+	REPEAT
+		SET swapped to false
+
+		FOR i = FIRST INDEX of collection to LAST INDEX of collection - 1
+			IF collection[i] > collection[i+1] THEN
+				SET temp to collection[i]
+				SET collection[i] to collection[i+1]
+				SET collection[i+1] to temp
+				SET swapped to true
+			END IF
+		END FOR
+	UNTIL swapped is FALSE
+	RETURN collection
+END FUNCTION
+
+
+2. Write pseudocode for quicksort.
+
+function quickSort(array, start, end)
+	
+	IF START is less than END THEN 
+		RETURN
+
+
+	function partition(array, start, end) 
+		SET pivot to array[end]
+		SET pIndex to start
+		FOR i = start to end-1 in array
+			IF array[i] is less than or equal to pivot
+				SWAP array[i] and array[pIndex]
+				INCREASE pIndex by 1
+			END IF
+		SWAP array[pIndex] AND array[end]
+		RETURN pIndex 
+	
+	quickSort(array,start, pIndex-1)
+	quickSort(array,pIndex+1,end)
+
+END FUNCTION
+
+
+3. We talked about time complexity in a previous checkpoint, and how to get an idea of the efficiency of an algorithm. After looking at the pseudocode for the above sorting methods, identify why merge sort and quick sort are much more efficient than the others. Walking through each algorithm with a few sample collections may help.
+
+I think merge and quick sort are more efficient because though they use recursion which typically takes up more resources, the divide and conquer mentality both use decreases the amount of loops or iterations through the entire dataset which is important if the data set gets large and it does not require a whole new array/collection to be created which takes up more memory.  By dividing and conquer, there is less demands on the computer to go through the increasingly smaller sub-collections. Another reason is that with both there is likely less swapping that needs to be done which is less demands on the system.
+
+
+4.All of the sorts addressed in this checkpoint are known as comparison sorts. Research bucket sort and explain how it works. What is the ideal input for bucket sort?
+
+Bucket sort is where it will take the known interval of the collection, and the number of items in the collection, N, and create N equal sub-intervals or buckets. It will then move each item into it's corresponding bucket.  If multiple items in a bucket, it will individually sort those buckets.  Once each bucket is sorted, then it will merge all the items back together. 
+
+The ideal input is a collection where the values are well distributed over an interval.
